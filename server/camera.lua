@@ -1,5 +1,5 @@
 push([[
-Camera = Class:Create(Element)
+Camera = Class:Create()
 
 function Camera:Player()
 	return self.player
@@ -34,9 +34,5 @@ function Camera:Interior(int)
 	end
 	
 	return getCameraInterior ( self.player )
-end
-
-function Player:giveWeapon(id, ammo, current)
-	return giveWeapon ( self.element, id, ammo, current )
 end
 ]])
