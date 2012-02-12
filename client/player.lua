@@ -19,7 +19,10 @@ function Player:Name()
 	return getPlayerName(self.element)
 end
 
-function Player:Team()
+function Player:Team(team)
+	if team then
+		return setPlayerTeam ( self.element, team.element )
+	end
 	return getPlayerTeam(self.element)
 end
 

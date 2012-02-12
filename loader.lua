@@ -6,7 +6,7 @@ if getResourceName(getThisResource()):lower == "openframe" then
 	end
 
 	function load()
-		return script
+		return table.concat(script, "\n\n")
 	end
 else
 	loadstring(exports.openframe:load())()
