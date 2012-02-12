@@ -1,0 +1,6 @@
+This is OpenFrame 2.0 Nightly. It shouldn't be used in production enviroment! Fell free to fork and ask for pull requests!
+
+Copyright (C) 2011-2012 Piotr "Orange" Zduniak. Licensed under MIT license.
+
+var_dump function copied from MTA:SA wiki. Copylefted by its owners.
+GUI Classes were written by 50p. Added to OpenFrame with autor's permission.
