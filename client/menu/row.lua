@@ -1,4 +1,3 @@
-push([[
 --[[
 	Part of openFrame project
 	Written by Lord Azamath. Additional changes by Noddy
@@ -7,6 +6,7 @@ push([[
 	- Creating menus, dynamically managing rows, various functions for row hover, row click.
 ]]--
 
+push([[
 Row = Class:Create()
 
 function Row:Title(title)

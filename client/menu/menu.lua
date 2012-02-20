@@ -1,4 +1,3 @@
-push([[
 --[[
 	Part of openFrame project
 	Written by Lord Azamath. Additional changes by Noddy
@@ -6,7 +5,7 @@ push([[
 	- Classes for creating various menus.
 	- Creating menus, dynamically managing rows, various functions for row hover, row click.
 ]]--
-
+push([[
 Menu = Class:Create()
 Menus = {
 activeMenu = false
