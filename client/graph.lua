@@ -30,11 +30,11 @@ function Graph:Create ( width, height )
 	
 	local success = true
 	
-	success = success and graph:SetSize ( width, height )
-	success = success and graph:SetMaxEntries ( 10 )
-	success = success and graph:SetMaxValue ( 100 )
-	success = success and graph:SetLineColor ( tocolor ( 255, 0, 0 ) )
-	success = success and graph:SetLineWidth ( 1 )
+	success = success and graph:Size ( width, height )
+	success = success and graph:MaxEntries ( 10 )
+	success = success and graph:MaxValue ( 100 )
+	success = success and graph:LineColor ( tocolor ( 255, 0, 0 ) )
+	success = success and graph:LineWidth ( 1 )
 	
 	if success then
 		table.insert ( graphs, graph )
@@ -255,9 +255,9 @@ function Graph:PrepareRenderTarget ( )
 	-- Prepare zeh variables!
 	local lastPosX, lastPosY
 	local width, height = self:GetSize ( )
-	local lineColor = self:GetLineColor ( )
-	local lineWidth = self:GetLineWidth ( )
-	local maxValue  = self:GetMaxValue  ( )
+	local lineColor = self:LineColor ( )
+	local lineWidth = self:LineWidth ( )
+	local maxValue  = self:MaxValue  ( )
 	
 	for i = entryCount, 1, -1 do
 		local entry = self.entries [ i ]
