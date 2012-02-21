@@ -254,7 +254,7 @@ function Graph:PrepareRenderTarget ( )
 	
 	-- Prepare zeh variables!
 	local lastPosX, lastPosY
-	local width, height = self:GetSize ( )
+	local width, height = self:Size ( )
 	local lineColor = self:LineColor ( )
 	local lineWidth = self:LineWidth ( )
 	local maxValue  = self:MaxValue  ( )
@@ -284,5 +284,5 @@ local function maintainGraphs ( )
 		end
 	end
 end
-addEventHandler ( "onClientRender", getRootElement ( ), maintainGraphs )
+addEventHandler ( "onClientRender", root, maintainGraphs )
 ]])
