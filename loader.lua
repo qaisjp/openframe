@@ -1,4 +1,4 @@
-if getResourceName(getThisResource()):lower == "openframe" then
+if getResourceName(getThisResource()):lower() == "openframe" then
 	local script = {}
 
 	function push(str)
