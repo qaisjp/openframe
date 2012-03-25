@@ -1,6 +1,6 @@
 --[[
         Timer class written by Kenix
-        Additional 
+        Additional modifications by Noddy
         Version:        1.0.0
 ]]
 
@@ -50,7 +50,7 @@ function Timer:Reset( )
 	return resetTimer( self.ele )
 end
 
-function Timer:Is( )
+function Timer:Exists( )
 	return isTimer( self.ele )
 end
 
