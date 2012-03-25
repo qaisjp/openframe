@@ -1,10 +1,12 @@
 --[[
-	Sound class writed by Kenix
+	Sound class written by Kenix
+	Additional 
 	Version:     	1.0.0
 ]]
+push([[
 
-Sound = { }
-
+Sound = Class:Create()
+	
 function fTableAssert( t )
 	if type( t ) == 'table' then
 		for _, v in pairs( t ) do
@@ -15,6 +17,15 @@ function fTableAssert( t )
 			end
 		end
 		return true
+	end
+	return false
+end
+
+function Sound:toObj( ele )
+	if ele then
+		local obj = Class:Create(Sound)
+		obj.ele = ele
+		return obj
 	end
 	return false
 end
@@ -43,9 +54,9 @@ function Sound:Play3D( sPath, nX, nY, nZ, bLoop )
 			sMsg 		= '4 argument is not number';
 		};
 	}
-	local uSound = playSound3D( sPath, nX, nY, nZ, bLoop )
-	assert( isElement( uSound ), 'playSound3D' )
-	return setmetatable( { uSound = uSound }, { __index = Sound } )
+	
+	local ele = playSound3D( sPath, nX, nY, nZ, bLoop )
+	return Sound:toObj(ele)
 end
 
 function Sound:Play( sPath, bLoop )
@@ -57,85 +68,110 @@ function Sound:Play( sPath, bLoop )
 			sMsg 		= '1 argument is not string';
 		}
 	}
-	local uSound = playSound( sPath, bLoop )
-	assert( isElement( uSound ), 'playSound' )
-	return setmetatable( { uSound = uSound }, { __index = Sound } )
+	local ele = playSound( sPath, bLoop )
+	return Sound:toObj(ele)
 end
 
 function Sound:Volume( nVolume )
-	fTableAssert 
-	{ 
-		{
-			value 		= type( nVolume );
-			condition 	= 'number';
-			sMsg 		= '1 argument is not number';
-		};
-		{
-			condition	= nVolume >= 0 and nVolume <= 1; 
-			sMsg		= 'Incorrect volume number';
-		};
-	}
-	return setSoundVolume( self.uSound, nVolume )
+	if nVolume then
+		fTableAssert 
+		{ 
+			{
+				value 		= type( nVolume );
+				condition 	= 'number';
+				sMsg 		= '1 argument is not number';
+			};
+			{
+				condition	= nVolume >= 0 and nVolume <= 1; 
+				sMsg		= 'Incorrect volume number';
+			};
+		}
+		return setSoundVolume( self.ele, nVolume )
+	end
+	
+	return getSoundVolume ( self.ele )
 end
 
 function Sound:Speed( nSpeed )
-	fTableAssert 
-	{ 
-		{
-			value 		= type( nSpeed );
-			condition 	= 'number';
-			sMsg 		= '1 argument is not number';
-		};
-	}
-	return setSoundSpeed( self.uSound, nSpeed )
+	if nSpeed then
+		fTableAssert 
+		{ 
+			{
+				value 		= type( nSpeed );
+				condition 	= 'number';
+				sMsg 		= '1 argument is not number';
+			};
+		}
+		return setSoundSpeed( self.ele, nSpeed )
+	end
+	
+	return getSoundSpeed( self.ele )
 end
 
 function Sound:Position( nPos )
-	fTableAssert 
-	{ 
-		{
-			value 		= type( nPos );
-			condition 	= 'number';
-			sMsg 		= '1 argument is not number';
-		};
-	}
-	return setSoundPosition( self.uSound, nPos )
+	if nPos then
+		fTableAssert 
+		{ 
+			{
+				value 		= type( nPos );
+				condition 	= 'number';
+				sMsg 		= '1 argument is not number';
+			};
+		}
+		return setSoundPosition( self.ele, nPos )
+	end
+	
+	return getSoundPosition( self.ele )
 end
 
+
 function Sound:Pause( bState )
-	fTableAssert 
-	{ 
-		{
-			value 		= type( bState );
-			condition 	= 'boolean';
-			sMsg 		= '1 argument is not boolean';
-		};
-	}
-	return setSoundPaused( self.uSound, bState )
+	if bState then
+		fTableAssert 
+		{ 
+			{
+				value 		= type( bState );
+				condition 	= 'boolean';
+				sMsg 		= '1 argument is not boolean';
+			};
+		}
+		return setSoundPaused( self.ele, bState )
+	end
+	
+	return isSoundPaused( self.ele )
 end
 
 function Sound:MaxDistance( nDistance )
-	fTableAssert 
-	{ 
-		{
-			value 		= type( nDistance );
-			condition 	= 'number';
-			sMsg 		= '1 argument is not number';
-		};
-	}
-	return setSoundMaxDistance( self.uSound, nDistance )
+	if nDistance then
+		fTableAssert 
+		{ 
+			{
+				value 		= type( nDistance );
+				condition 	= 'number';
+				sMsg 		= '1 argument is not number';
+			};
+		}
+		return setSoundMaxDistance( self.ele, nDistance )
+	end
+	
+	return getSoundMaxDistance( self.ele )
 end
 
+
 function Sound:MinDistance( nDistance )
-	fTableAssert 
-	{ 
-		{
-			value 		= type( nDistance );
-			condition 	= 'number';
-			sMsg 		= '1 argument is not number';
-		};
-	}
-	return setSoundMinDistance( self.uSound, nDistance )
+	if nDistance then
+		fTableAssert 
+		{ 
+			{
+				value 		= type( nDistance );
+				condition 	= 'number';
+				sMsg 		= '1 argument is not number';
+			};
+		}
+		return setSoundMinDistance( self.ele, nDistance )
+	end
+	
+	return getSoundMinDistance( self.ele )
 end
 
 function Sound:Effect( sName, bEnable )
@@ -152,51 +188,23 @@ function Sound:Effect( sName, bEnable )
 			sMsg 		= '1 argument is not boolean';
 		};
 	}
-	return setSoundEffectEnabled( self.uSound, sName, bEnable )
+	
+	return setSoundEffectEnabled( self.ele, sName, bEnable )
 end
 
 function Sound:Stop( )
-	return stopSound( self.uSound )
+	return stopSound( self.ele )
 end
 
 function Sound:Destroy( )
-	return destroyElement( self.uSound )
+	return destroyElement( self.ele )
 end
 
-function Sound:IsPaused( )
-	return isSoundPaused( self.uSound )
+function Sound:MetaTags( )
+	return getSoundMetaTags( self.ele )
 end
 
-function Sound:GetVolume( )
-	return getSoundVolume( self.uSound )
+function Sound:Length( )
+	return getSoundLength( self.ele )
 end
-
-function Sound:getSpeed( )
-	return getSoundSpeed( self.uSound )
-end
-
-function Sound:getPosition( )
-	return getSoundPosition( self.uSound )
-end
-
-function Sound:getMinDistance( )
-	return getSoundMinDistance( self.uSound )
-end
-
-function Sound:getMaxDistance( )
-	return getSoundMaxDistance( self.uSound )
-end
-
-function Sound:getMetaTags( )
-	return getSoundMetaTags( self.uSound )
-end
-
-function Sound:getLength( )
-	return getSoundLength( self.uSound )
-end
-
-function Sound:getEffects( )
-	return getSoundEffects( self.uSound )
-end
-
-
+]])
