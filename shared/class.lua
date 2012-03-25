@@ -22,6 +22,20 @@ end
 
 ResourceRoot = getResourceRootElement(getThisResource())
 
+function TableAssert( t )
+        if type( t ) == 'table' then
+                for _, v in pairs( t ) do
+                        if v.value and v.condition then
+                                assert( v.value == v.condition, v.sMsg )
+                        elseif v.condition == false then
+                                assert( v.condition, v.sMsg )
+                        end
+                end
+                return true
+        end
+        return false
+end
+
 -- modifiers: v - verbose (all subtables), n - normal, s - silent (no output), dx - up to depth x, u - unnamed
 function var_dump(...)
 	-- default options
