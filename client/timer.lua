@@ -5,7 +5,7 @@
 ]]
 
 
-push( [[
+push([[
 
 Timer = Class:Create()
 
@@ -59,6 +59,7 @@ function Timer:Details( )
 end
 
 
-]] )
+]])
+
 
 
