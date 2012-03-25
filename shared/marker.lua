@@ -1,7 +1,7 @@
 --[[
 		Marker class written by Kenix
 		Additional 
-        Version:        1.0.0
+		Version:        1.0.0
 ]]
 
 
