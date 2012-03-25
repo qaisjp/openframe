@@ -1,6 +1,6 @@
 --[[
         Timer class written by Kenix
-        Additional modifications by Noddy
+        Additional 
         Version:        1.0.0
 ]]
 
@@ -23,19 +23,19 @@ function Timer:Create( fCallBack, nInterval, nTimesToExecute, ... )
 	{
 		{
 			value 			= type( fCallBack );
-			condition       = 'function';
-			sMsg            = '1 argument is not function';
+			condition 		= 'function';
+			sMsg  			= '1 argument is not function';
 		
 		};
 		{
 			value 			= type( nInterval );
-			condition       = 'number';
-			sMsg            = '2 argument is not number';
+			condition		= 'number';
+			sMsg  			= '2 argument is not number';
 		};
 		{
 			value 			= type( nTimesToExecute );
-			condition       = 'number';
-			sMsg            = '3 argument is not number';
+			condition 		= 'number';
+			sMsg  			= '3 argument is not number';
 		};
 	}
 	local ele = setTimer( fCallBack, nInterval, nTimesToExecute, ... )
@@ -50,7 +50,7 @@ function Timer:Reset( )
 	return resetTimer( self.ele )
 end
 
-function Timer:Exists( )
+function Timer:Is( )
 	return isTimer( self.ele )
 end
 
@@ -60,6 +60,5 @@ end
 
 
 ]])
-
 
 
