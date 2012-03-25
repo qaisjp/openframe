@@ -3,7 +3,7 @@
 	Version:     	1.0.0
 ]]
 
-CSound = { }
+Sound = { }
 
 function fTableAssert( t )
 	if type( t ) == 'table' then
@@ -19,7 +19,7 @@ function fTableAssert( t )
 	return false
 end
 
-function CSound:Play3D( sPath, nX, nY, nZ, bLoop, bInsert )
+function Sound:Play3D( sPath, nX, nY, nZ, bLoop )
 	fTableAssert 
 	{ 
 		{
@@ -45,13 +45,10 @@ function CSound:Play3D( sPath, nX, nY, nZ, bLoop, bInsert )
 	}
 	local uSound = playSound3D( sPath, nX, nY, nZ, bLoop )
 	assert( isElement( uSound ), 'playSound3D' )
-	if not bInsert then
-		return setmetatable( { uSound = uSound }, { __index = CSound } )
-	end
-	return uSound
+	return setmetatable( { uSound = uSound }, { __index = Sound } )
 end
 
-function CSound:Play( sPath, bLoop, bInsert )
+function Sound:Play( sPath, bLoop )
 	fTableAssert 
 	{ 
 		{
@@ -62,13 +59,10 @@ function CSound:Play( sPath, bLoop, bInsert )
 	}
 	local uSound = playSound( sPath, bLoop )
 	assert( isElement( uSound ), 'playSound' )
-	if not bInsert then
-		return setmetatable( { uSound = uSound }, { __index = CSound } )
-	end
-	return uSound
+	return setmetatable( { uSound = uSound }, { __index = Sound } )
 end
 
-function CSound:Volume( nVolume )
+function Sound:Volume( nVolume )
 	fTableAssert 
 	{ 
 		{
@@ -84,7 +78,7 @@ function CSound:Volume( nVolume )
 	return setSoundVolume( self.uSound, nVolume )
 end
 
-function CSound:Speed( nSpeed )
+function Sound:Speed( nSpeed )
 	fTableAssert 
 	{ 
 		{
@@ -96,7 +90,7 @@ function CSound:Speed( nSpeed )
 	return setSoundSpeed( self.uSound, nSpeed )
 end
 
-function CSound:Position( nPos )
+function Sound:Position( nPos )
 	fTableAssert 
 	{ 
 		{
@@ -108,7 +102,7 @@ function CSound:Position( nPos )
 	return setSoundPosition( self.uSound, nPos )
 end
 
-function CSound:Pause( bState )
+function Sound:Pause( bState )
 	fTableAssert 
 	{ 
 		{
@@ -120,7 +114,7 @@ function CSound:Pause( bState )
 	return setSoundPaused( self.uSound, bState )
 end
 
-function CSound:MaxDistance( nDistance )
+function Sound:MaxDistance( nDistance )
 	fTableAssert 
 	{ 
 		{
@@ -132,7 +126,7 @@ function CSound:MaxDistance( nDistance )
 	return setSoundMaxDistance( self.uSound, nDistance )
 end
 
-function CSound:MinDistance( nDistance )
+function Sound:MinDistance( nDistance )
 	fTableAssert 
 	{ 
 		{
@@ -144,7 +138,7 @@ function CSound:MinDistance( nDistance )
 	return setSoundMinDistance( self.uSound, nDistance )
 end
 
-function CSound:Effect( sName, bEnable )
+function Sound:Effect( sName, bEnable )
 	fTableAssert 
 	{ 
 		{
@@ -161,47 +155,47 @@ function CSound:Effect( sName, bEnable )
 	return setSoundEffectEnabled( self.uSound, sName, bEnable )
 end
 
-function CSound:Stop( )
+function Sound:Stop( )
 	return stopSound( self.uSound )
 end
 
-function CSound:Destroy( )
+function Sound:Destroy( )
 	return destroyElement( self.uSound )
 end
 
-function CSound:IsPaused( )
+function Sound:IsPaused( )
 	return isSoundPaused( self.uSound )
 end
 
-function CSound:GetVolume( )
+function Sound:GetVolume( )
 	return getSoundVolume( self.uSound )
 end
 
-function CSound:getSpeed( )
+function Sound:getSpeed( )
 	return getSoundSpeed( self.uSound )
 end
 
-function CSound:getPosition( )
+function Sound:getPosition( )
 	return getSoundPosition( self.uSound )
 end
 
-function CSound:getMinDistance( )
+function Sound:getMinDistance( )
 	return getSoundMinDistance( self.uSound )
 end
 
-function CSound:getMaxDistance( )
+function Sound:getMaxDistance( )
 	return getSoundMaxDistance( self.uSound )
 end
 
-function CSound:getMetaTags( )
+function Sound:getMetaTags( )
 	return getSoundMetaTags( self.uSound )
 end
 
-function CSound:getLength( )
+function Sound:getLength( )
 	return getSoundLength( self.uSound )
 end
 
-function CSound:getEffects( )
+function Sound:getEffects( )
 	return getSoundEffects( self.uSound )
 end
 
