@@ -1,8 +1,5 @@
 <meta>
-	<info name="OpenFrame" author="Orange" version="2.0.0" type="script" />
-	
-	<!-- Based on OpenFrame 2 Nightly ~ Modified by Noddy into a loadable state-->
-	<!-- wondering how to script it then? take out the '[[' at the start of a script, edit it and it again after -->
+	<info name="openFrame" author="The openFrame team" version="2.1" type="script" />
 	
 	<script src="loader.lua" type="client" />
 	<script src="loader.lua" type="server" />
@@ -62,4 +59,6 @@
 	<!-- Exports -->
 	<export function="load" type="client" />
 	<export function="load" type="server" />
+  <export function="getScripts" type="server" />
+  <export function="getScripts" type="server" />
 </meta>
