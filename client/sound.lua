@@ -6,20 +6,7 @@
 push([[
 
 Sound = Class:Create()
-	
-function fTableAssert( t )
-	if type( t ) == 'table' then
-		for _, v in pairs( t ) do
-			if v.value and v.condition then
-				assert( v.value == v.condition, v.sMsg )
-			elseif v.condition == false then
-				assert( v.condition, v.sMsg )
-			end
-		end
-		return true
-	end
-	return false
-end
+
 
 function Sound:toObj( ele )
 	if ele then
@@ -31,7 +18,7 @@ function Sound:toObj( ele )
 end
 
 function Sound:Play3D( sPath, nX, nY, nZ, bLoop )
-	fTableAssert 
+	TableAssert 
 	{ 
 		{
 			value 		= type( sPath );
@@ -60,7 +47,7 @@ function Sound:Play3D( sPath, nX, nY, nZ, bLoop )
 end
 
 function Sound:Play( sPath, bLoop )
-	fTableAssert 
+	TableAssert 
 	{ 
 		{
 			value 		= type( sPath );
@@ -74,7 +61,7 @@ end
 
 function Sound:Volume( nVolume )
 	if nVolume then
-		fTableAssert 
+		TableAssert 
 		{ 
 			{
 				value 		= type( nVolume );
@@ -94,7 +81,7 @@ end
 
 function Sound:Speed( nSpeed )
 	if nSpeed then
-		fTableAssert 
+		TableAssert 
 		{ 
 			{
 				value 		= type( nSpeed );
@@ -110,7 +97,7 @@ end
 
 function Sound:Position( nPos )
 	if nPos then
-		fTableAssert 
+		TableAssert 
 		{ 
 			{
 				value 		= type( nPos );
@@ -127,7 +114,7 @@ end
 
 function Sound:Pause( bState )
 	if bState then
-		fTableAssert 
+		TableAssert 
 		{ 
 			{
 				value 		= type( bState );
@@ -143,7 +130,7 @@ end
 
 function Sound:MaxDistance( nDistance )
 	if nDistance then
-		fTableAssert 
+		TableAssert 
 		{ 
 			{
 				value 		= type( nDistance );
@@ -160,7 +147,7 @@ end
 
 function Sound:MinDistance( nDistance )
 	if nDistance then
-		fTableAssert 
+		TableAssert 
 		{ 
 			{
 				value 		= type( nDistance );
@@ -175,7 +162,7 @@ function Sound:MinDistance( nDistance )
 end
 
 function Sound:Effect( sName, bEnable )
-	fTableAssert 
+	TableAssert 
 	{ 
 		{
 			value 		= type( sName );
