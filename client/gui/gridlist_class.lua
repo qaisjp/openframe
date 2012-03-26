@@ -465,4 +465,45 @@ function GridList:SelectionMode( mode )
 	end
 	return self.selectiomode;
 end
+
+--	Function: GridList:ItemColor
+--	Gets/sets the color item
+--
+--  Required Arguments:
+--		rowIndex - (integer) ID of row
+--		columnIndex - (integer) ID of column   
+
+--  Optional Arguments:
+--		If set, the color item will be set to it.
+--     	red - (integer) ?
+--     	green - (integer) ?
+--     	blue - (integer) ?
+--		alpha - (integer) ?
+
+--	Returns:
+--		* Returns color if tried to get
+--      * Returns true or false if tried to set
+function GridList:ItemColor(  rowIndex, columnIndex, red, green, blue, alpha )
+	if ( type( self ) ~= "table" ) then
+		outputDebugString( "calling method incorrectly ( object.method() )! use object:method()", 1 );
+		return false
+	end
+	TableAssert
+	{
+		{
+			value 		= type( rowIndex );
+			condition 	= 'number';
+			sMsg 		= '1 argument not is number';
+		};
+		{
+			value 		= type( columnIndex );
+			condition 	= 'number';
+			sMsg 		= '2 argument not is number';
+		};
+	};
+	if ( type( red ) == "number" and type( green ) == "number" and type( blue ) == "number" ) then
+		return guiGridListSetItemColor( self.gui, rowIndex, columnIndex, red, green, blue, alpha );
+	end
+	return guiGridListGetItemColor( self.gui, rowIndex, columnIndex );
+end
 ]])
