@@ -64,5 +64,5 @@
 	<export function="load" type="client" />
 	<export function="load" type="server" />
 	<export function="getScripts" type="server" />
-	<export function="getScripts" type="server" />
+	<export function="getScripts" type="client" />
 </meta>
