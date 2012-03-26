@@ -7,7 +7,7 @@
 	<script src="shared/class.lua" type="client" />
 	<script src="shared/class.lua" type="server" />
 	<script src="shared/error.lua" type="client" />
-	<script src="shared/error.lua" type="server" />
+  <script src="shared/error.lua" type="server" />
   <script src="shared/timer.lua" type="server" />  
   <script src="shared/timer.lua" type="client" />
   <script src="shared/xml.lua"   type="server" />     
