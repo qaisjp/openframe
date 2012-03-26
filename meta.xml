@@ -7,11 +7,11 @@
 	<script src="shared/class.lua" type="client" />
 	<script src="shared/class.lua" type="server" />
 	<script src="shared/error.lua" type="client" />
-  <script src="shared/error.lua" type="server" />
-  <script src="shared/timer.lua" type="server" />  
-  <script src="shared/timer.lua" type="client" />
-  <script src="shared/xml.lua"   type="server" />      
-  <script src="shared/xml.lua"   type="client" /> 
+	<script src="shared/error.lua" type="server" />
+	<script src="shared/timer.lua" type="server" />  
+	<script src="shared/timer.lua" type="client" />
+	<script src="shared/xml.lua"   type="server" />      
+	<script src="shared/xml.lua"   type="client" /> 
 	
 	<!-- Client Menu Classes -->
 	<script src="client/menu/menu.lua" type="client" />
@@ -63,6 +63,6 @@
 	<!-- Exports -->
 	<export function="load" type="client" />
 	<export function="load" type="server" />
-  <export function="getScripts" type="server" />
-  <export function="getScripts" type="server" />
+	<export function="getScripts" type="server" />
+	<export function="getScripts" type="server" />
 </meta>
