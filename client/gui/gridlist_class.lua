@@ -501,9 +501,6 @@ function GridList:ItemColor(  rowIndex, columnIndex, red, green, blue, alpha )
 			sMsg 		= '2 argument not is number';
 		};
 	};
-	if ( type( red ) == "number" and type( green ) == "number" and type( blue ) == "number" ) then
-		return guiGridListSetItemColor( self.gui, rowIndex, columnIndex, red, green, blue, alpha );
-	end
-	return guiGridListGetItemColor( self.gui, rowIndex, columnIndex );
+return guiGridListGetItemColor( self.gui, rowIndex, columnIndex, tonumber(red) or 255, tonumber(green) or 255, tonumber(blue) or 255, tonumber(alpha) or 255 );
 end
 ]])
