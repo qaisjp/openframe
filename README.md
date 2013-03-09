@@ -11,7 +11,7 @@ Use it, when you want to:
   _With openFrame, your code will become simpler and easier to learn. It helps with sharing your resources with others._
  * *Make commercial projects*
   _You can sell gamemodes written with openFrame, because it's released under MIT license_
- * *Use other LUA===
+ * *Use other LUA*
   _Usually, LUA is function-based language. With openFrame, LUA becomes an OOP language!_
  * *.. and a lot of other things!*
   _openFrame is fully extensible, so you always can add your own classes to extend it._
