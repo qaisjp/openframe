@@ -1,6 +1,12 @@
 ![logo](http://code.google.com/p/openframe/logo?cct=1329042490&noddy=get.png)
 
-`openFrame is a fully OOP MTA framework.  It allows you to make your scripts cleaner and easier.  Inspired by GUIClasses, the original form of classes is easy to learn and use.  It uses advanced features of LUA and extends it.`
+`openFrame is a fully OOP MTA framework.
+
+It allows you to make your scripts cleaner and easier.
+
+Inspired by GUIClasses, the original form of classes is easy to learn and use.
+
+It uses advanced features of LUA and extends it.`
 
 Use it, when you want to:
 =========================
@@ -15,6 +21,7 @@ Use it, when you want to:
 
 
 `openFrame and all content on this page is Copyright © Piotr "Orange" Zduniak and other contributors 2010-2012.
+
 Licensed under MIT license`
 
 
