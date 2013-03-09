@@ -1,12 +1,9 @@
 ![logo](http://code.google.com/p/openframe/logo?cct=1329042490&noddy=get.png)
 
-`openFrame is a fully OOP MTA framework.
-
+openFrame is a fully OOP MTA framework.
 It allows you to make your scripts cleaner and easier.
-
 Inspired by GUIClasses, the original form of classes is easy to learn and use.
-
-It uses advanced features of LUA and extends it.`
+It uses advanced features of LUA and extends it.
 
 Use it, when you want to:
 =========================
@@ -20,9 +17,8 @@ Use it, when you want to:
   _openFrame is fully extensible, so you always can add your own classes to extend it._
 
 
-`openFrame and all content on this page is Copyright © Piotr "Orange" Zduniak and other contributors 2010-2012.
-
-Licensed under MIT license`
+openFrame and all content on this page is Copyright © Piotr "Orange" Zduniak and other contributors 2010-2012.
+Licensed under MIT license
 
 
 var_dump function copied from MTA:SA wiki under license of Creative Commons CC by SA.
