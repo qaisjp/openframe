@@ -1,3 +1,5 @@
+*MTA 1.4 introduces OOP, this means that the whole nature of openframe might change. openframe might even be replaced with Extensify.*
+
 ![logo](http://code.google.com/p/openframe/logo?cct=1329042490&noddy=get.png)
 
 openFrame is a fully OOP MTA framework.
