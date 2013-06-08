@@ -1,3 +1,7 @@
+*This is the incomplete openframe 2.0 which is now deprecated. 2.0 brings some OOP functionality to the MTA scene, but it isn't built for 1.4. We don't even know what it is last supported on.*
+
+**Instead, use the latest openframe which can be found [here.](https://github.com/projectoraculum/openframe)**
+
 ![logo](http://code.google.com/p/openframe/logo?cct=1329042490&noddy=get.png)
 
 openFrame is a fully OOP MTA framework.
