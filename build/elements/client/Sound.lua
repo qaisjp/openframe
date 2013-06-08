@@ -2,8 +2,80 @@ local Sound
 do
   local _parent_0 = Element
   local _base_0 = {
-    destroy = function(self)
-      return destroyElement(self.element)
+    length = function(self)
+      return getSoundLength(self.element)
+    end,
+    effects = function(self)
+      return setSoundEffects(self.effects)
+    end,
+    meta_tags = function(self)
+      return getSoundMetaTags(self.element)
+    end,
+    enable_effect = function(self, name, enabled)
+      return setSoundEffectEnabled(name, enabled)
+    end,
+    stop = function(self)
+      return stopSound(self.element)
+    end,
+    bpm = function(self)
+      return getSoundBPM(self.element)
+    end,
+    fft = function(self, samples, bands)
+      return getSoundFFTData(self.element, samples, bands)
+    end,
+    wave = function(self, samples)
+      return getSoundWaveData(self.element, samples)
+    end,
+    level = function(self)
+      return getSoundLevelData(self.element)
+    end,
+    max_distance = function(self, value)
+      if value then
+        return setSoundMaxDistance(self.element, value)
+      end
+      return getSoundMaxDistance(self.element)
+    end,
+    min_distance = function(self, value)
+      if value then
+        return setSoundMinDistance(self.element, value)
+      end
+      return getSoundMinDistance(self.element)
+    end,
+    position = function(self, value)
+      if value then
+        return setSoundPosition(self.element, value)
+      end
+      return getSoundPosition(self.element)
+    end,
+    speed = function(self, value)
+      if value then
+        return setSoundSpeed(self.element, value)
+      end
+      return getSoundSpeed(self.element)
+    end,
+    volume = function(self, value)
+      if value then
+        return setSoundVolume(self.element, value)
+      end
+      return getSoundVolume(self.element)
+    end,
+    paused = function(self, value)
+      if value then
+        return isSoundPaused(self.element)
+      end
+      return setSoundPaused(self.element, value)
+    end,
+    properties = function(self, srate, tempo, pitch, reverse)
+      if srate and tempo and pitch and reverse then
+        return setSoundProperties(self.element, srate, tempo, pitch, reverse)
+      end
+      return getSoundProperties(self.element)
+    end,
+    pan = function(self, value)
+      if value then
+        return setSoundPan(self.element, value)
+      end
+      return getSoundPan(self.element)
     end
   }
   _base_0.__index = _base_0
