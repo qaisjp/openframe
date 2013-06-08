@@ -1,5 +1,0 @@
-<meta>
-  <info author="Piotr &quot;Orange&quot; Zduniak" version="3.0" type="script" description="Introduces OOP into LUA using Moonscript" name="openFrame"/>
-  <script src="elements/client/Element.moon" type="client"/>
-  <script src="elements/client/Sound.moon" type="client"/>
-</meta>
