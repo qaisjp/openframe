@@ -1,0 +1,23 @@
+meta:
+    name: openFrame
+    author: Piotr "Orange" Zduniak
+    version: 3.0
+    description: Introduces OOP into LUA using Moonscript
+    type: script
+    
+source: source
+destination: build
+default_flag: dev
+
+flags:
+    dev:
+    prod:
+        - compile
+    
+scripts:
+    - path: elements/client/*.moon
+      type: client
+      moonscript: true
+    - path: elements/server/*.moon
+      type: server
+      moonscript: true
