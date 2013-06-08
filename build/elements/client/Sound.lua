@@ -84,7 +84,9 @@ do
   end
   local _class_0 = setmetatable({
     __init = function(self, path, looped, x, y, z)
-      if not x or not y or not z then
+      if not path or not looped then
+        self.element = path
+      elseif not x or not y or not z then
         self.element = playSound(path, looped)
       else
         self.element = playSound3D(path, x, y, z, looped)
