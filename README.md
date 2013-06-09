@@ -1,9 +1,9 @@
 ![logo](http://code.google.com/p/openframe/logo?cct=1329042490&noddy=get.png)
 
-openFrame is a fully OOP MTA framework.
+openFrame is a fully OOP MTA framework, built in Moonscript and built with Meta.py.
 It allows you to make your scripts cleaner and easier.
-Inspired by GUIClasses, the original form of classes is easy to learn and use.
-It uses advanced features of LUA and extends it.
+Originially inspired by GUIClasses, the original form of classes is easy to learn and use.
+It uses advanced features of Lua and extends its functionality
 
 Use it, when you want to:
 =========================
@@ -17,16 +17,5 @@ Use it, when you want to:
   _openFrame is fully extensible, so you always can add your own classes to extend it._
 
 
-openFrame and all content on this page is Copyright © Piotr "Orange" Zduniak and other contributors 2010-2012.
+openFrame and all content in this repository is Copyright © Piotr "Orange" Zduniak and other contributors 2010-2013.
 Licensed under MIT license
-
-
-var_dump function copied from MTA:SA wiki under license of Creative Commons CC by SA.
-
-GUI Classes were written by 50p.
-
-Added to OpenFrame with permission of author.
-
-Menu classes were written by Lord_Azamath (forum: Lordy). Added to openFrame with permission of author.
-
-Graph class was written by Gamesnert. Added to openFrame with permission of author.
