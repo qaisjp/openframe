@@ -3,6 +3,7 @@
   <script src="elements/client/Colshape.moon" type="client"/>
   <script src="elements/client/Element.moon" type="client"/>
   <script src="elements/client/Ped.moon" type="client"/>
+  <script src="elements/client/Pickup.moon" type="client"/>
   <script src="elements/client/Sound.moon" type="client"/>
   <script src="elements/client/Water.moon" type="client"/>
   <script src="elements/client/Weapon.moon" type="client"/>
