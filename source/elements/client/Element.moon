@@ -8,7 +8,6 @@ class Element
     by_id: (id, index) => getElementByID(id, index)
 
 
-
     destroy: => destroyElement(@element)
     radius: => getElementRadius(@element)
     low_lod: => isElementLowLOD(@element)
@@ -90,9 +89,6 @@ class Element
             return setElementStreamable @element, state
         return getElementStreamable @element
 
-    
-
-
     collisions_enabled: (enabled) =>
         if enabled
             return setElementCollisionsEnabled @element, enabled
@@ -122,9 +118,6 @@ class Element
         if state
             return setElementFrozen @element, state
         return isElementFrozen @element
-
-
-
 
     -- Disabled because get and set both have 1arg
     --matrix: (matrix_legacy) =>
