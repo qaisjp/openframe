@@ -10,7 +10,7 @@ class Sound extends Element
     length: => getSoundLength @element
     effects: => setSoundEffects @effects
     meta_tags: => getSoundMetaTags @element
-    enable_effect: (name, enabled) => setSoundEffectEnabled name, enabled
+    enable_effect: (name, enabled) => setSoundEffectEnabled @element, name, enabled
     stop: => stopSound @element
     bpm: => getSoundBPM @element
     fft: (samples, bands) => getSoundFFTData @element, samples, bands
@@ -44,8 +44,8 @@ class Sound extends Element
 
     paused: (value) =>
         if value
-            return isSoundPaused @element
-        return setSoundPaused @element, value
+            return setSoundPaused @element, value
+        return isSoundPaused @element
     
     properties: (srate, tempo, pitch, reverse) =>
         if srate and tempo and pitch and reverse

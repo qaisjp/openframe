@@ -12,7 +12,7 @@ do
       return getSoundMetaTags(self.element)
     end,
     enable_effect = function(self, name, enabled)
-      return setSoundEffectEnabled(name, enabled)
+      return setSoundEffectEnabled(self.element, name, enabled)
     end,
     stop = function(self)
       return stopSound(self.element)
@@ -61,9 +61,9 @@ do
     end,
     paused = function(self, value)
       if value then
-        return isSoundPaused(self.element)
+        return setSoundPaused(self.element, value)
       end
-      return setSoundPaused(self.element, value)
+      return isSoundPaused(self.element)
     end,
     properties = function(self, srate, tempo, pitch, reverse)
       if srate and tempo and pitch and reverse then
