@@ -22,6 +22,12 @@ do
         return setRadarAreaFlashing(self.element, bool)
       end
       return isRadarAreaFlashing(self.element)
+    end,
+    size = function(self, x, y)
+      if x and y then
+        return setRadarAreaSize(self.element, x, y)
+      end
+      return getRadarAreaSize(self.element)
     end
   }
   _base_0.__index = _base_0

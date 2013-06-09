@@ -1,0 +1,2 @@
+-- Incomplete. Two constructors?
+-- createBlip and createBlipAttachedTo

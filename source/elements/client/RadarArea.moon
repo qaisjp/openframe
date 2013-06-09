@@ -15,3 +15,8 @@ class RadarArea extends Element
     	if bool
     		return setRadarAreaFlashing @element, bool
     	return isRadarAreaFlashing @element
+
+    size: (x, y) =>
+        if x and y
+            return setRadarAreaSize @element, x, y
+        return getRadarAreaSize @element
