@@ -15,9 +15,9 @@ flags:
         - compile
     
 scripts:
-    - path: elements/client/*.moon
+    - path: openframe/*/client/*.moon
       type: client
       moonscript: true
-    - path: elements/server/*.moon
+    - path: openframe/*/server/*.moon
       type: server
       moonscript: true
