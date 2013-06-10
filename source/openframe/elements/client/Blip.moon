@@ -6,16 +6,16 @@ class Blip extends Element
 	element = nil
 
 	new: (...) =>
-		arg_count = #{...} 
+		arguments = {...}
 
-		if arg_count => 3
+		if argument[0]['element']
+			-- createBlipAttachedTo
+			arguments[0] = arguments[0]['element']
+			@element = createBlipAttachedTo unpack(arguments)
+		else
 			-- createBlip
 			@element = createBlip ...
-		else
-			-- createBlipAttachedTo
-			arguments = {...}
-			arguments[1] = arguments[1]['element']
-			@element = createBlipAttachedTo unpack(arguments)
+			
 
 	color: (color = nil) =>
 		if color == nil
