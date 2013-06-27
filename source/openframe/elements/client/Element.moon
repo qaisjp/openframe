@@ -1,3 +1,5 @@
+export Element
+
 class Element
 	new: (type, id) =>
         @element = createElement, type, id
