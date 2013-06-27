@@ -1,3 +1,5 @@
+export Ped
+
 class Ped extends Element
     new: (model, x, y, z, rot) =>
         @element = createPed model, x, y, z, rot
@@ -26,3 +28,6 @@ class Ped extends Element
         if block ~= nil
             return setPedAnimation @element, block, anim, time, loop, update, interruptable, freeze
         return getPedAnimatino @element
+
+    add_blip: (icon) =>
+        Blip @, icon

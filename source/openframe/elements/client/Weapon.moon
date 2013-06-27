@@ -1,3 +1,5 @@
+export Weapon
+
 class Weapon extends Element
     new: (type, x, y, z) =>
         @element = createWeapon type, x, y, z

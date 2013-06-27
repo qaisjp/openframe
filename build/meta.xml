@@ -1,12 +1,12 @@
 <meta>
   <info author="Piotr &quot;Orange&quot; Zduniak" version="3.0" type="script" description="Introduces OOP into LUA using Moonscript" name="openFrame"/>
-  <script src="elements/client/Blip.moon" type="client"/>
-  <script src="elements/client/Colshape.moon" type="client"/>
-  <script src="elements/client/Element.moon" type="client"/>
-  <script src="elements/client/Ped.moon" type="client"/>
-  <script src="elements/client/Pickup.moon" type="client"/>
-  <script src="elements/client/RadarArea.moon" type="client"/>
-  <script src="elements/client/Sound.moon" type="client"/>
-  <script src="elements/client/Water.moon" type="client"/>
-  <script src="elements/client/Weapon.moon" type="client"/>
+  <script src="openframe/elements/client/Blip.lua" type="client"/>
+  <script src="openframe/elements/client/Colshape.lua" type="client"/>
+  <script src="openframe/elements/client/Element.lua" type="client"/>
+  <script src="openframe/elements/client/Ped.lua" type="client"/>
+  <script src="openframe/elements/client/Pickup.lua" type="client"/>
+  <script src="openframe/elements/client/RadarArea.lua" type="client"/>
+  <script src="openframe/elements/client/Sound.lua" type="client"/>
+  <script src="openframe/elements/client/Water.lua" type="client"/>
+  <script src="openframe/elements/client/Weapon.lua" type="client"/>
 </meta>
