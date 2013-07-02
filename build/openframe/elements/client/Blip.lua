@@ -59,19 +59,14 @@ do
   end
   local _class_0 = setmetatable({
     __init = function(self, ...)
-      local arg_count = #{
+      local arguments = {
         ...
       }
-      if arg_count(function(self)
-        return 3
-      end) then
-        self.element = createBlip(...)
-      else
-        local arguments = {
-          ...
-        }
-        arguments[1] = arguments[1]['element']
+      if argument[0]['element'] then
+        arguments[0] = arguments[0]['element']
         self.element = createBlipAttachedTo(unpack(arguments))
+      else
+        self.element = createBlip(...)
       end
     end,
     __base = _base_0,

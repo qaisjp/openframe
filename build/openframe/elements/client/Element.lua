@@ -1,4 +1,3 @@
-local Element
 do
   local _parent_0 = nil
   local _base_0 = {
