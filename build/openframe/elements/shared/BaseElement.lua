@@ -1,4 +1,3 @@
-local Element
 do
   local _parent_0 = nil
   local _base_0 = {
@@ -192,7 +191,7 @@ do
       self.element = createElement, type, id
     end,
     __base = _base_0,
-    __name = "Element",
+    __name = "BaseElement",
     __parent = _parent_0
   }, {
     __index = function(cls, name)
@@ -213,6 +212,17 @@ do
   if _parent_0 and _parent_0.__inherited then
     _parent_0.__inherited(_parent_0, _class_0)
   end
-  Element = _class_0
-  return _class_0
+  BaseElement = _class_0
 end
+local patch
+patch = function(klass)
+  getmetatable(klass).__call = function(cls, ...)
+    local self = setmetatable({ }, cls.__base)
+    local newself = cls.__init(self, ...)
+    if newself then
+      self = setmetatable(newself, cls.__base)
+    end
+    return self
+  end
+end
+return patch(BaseElement)

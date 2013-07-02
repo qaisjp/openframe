@@ -1,21 +1,18 @@
-local Pickup
+if not getModuleInfo("mtasa-curl") then
+  return 
+end
+local Curl
 do
-  local _parent_0 = Element
+  local pCurl
+  local _parent_0 = nil
   local _base_0 = {
-    ammo = function(self)
-      return getPickupAmmo(self.element)
-    end,
-    amount = function(self)
-      return getPickupAmmount(self.element)
-    end,
-    weapon = function(self)
-      return getPickupWeapon(self.element)
-    end,
-    type = function(self, type, var, ammo)
-      if type then
-        return setPickupType(self.element, type, var, ammo)
+    setopt_table = function(options)
+      for option, value in pairs(options) do
+        curl_setopt(self.pCurl, option, value)
       end
-      return getPickupType(self.element)
+    end,
+    setopt = function(option, value)
+      return curl_setopt(self.pCurl, option, value)
     end
   }
   _base_0.__index = _base_0
@@ -23,11 +20,14 @@ do
     setmetatable(_base_0, _parent_0.__base)
   end
   local _class_0 = setmetatable({
-    __init = function(self, x, y, z, type, var, respawn, ammo)
-      self.element = createPickup(x, y, z, type, var, respawn, ammo)
+    __init = function(url)
+      if url == nil then
+        url = ""
+      end
+      self.pCurl = curl_init(url)
     end,
     __base = _base_0,
-    __name = "Pickup",
+    __name = "Curl",
     __parent = _parent_0
   }, {
     __index = function(cls, name)
@@ -45,9 +45,11 @@ do
     end
   })
   _base_0.__class = _class_0
+  local self = _class_0
+  pCurl = nil
   if _parent_0 and _parent_0.__inherited then
     _parent_0.__inherited(_parent_0, _class_0)
   end
-  Pickup = _class_0
+  Curl = _class_0
   return _class_0
 end

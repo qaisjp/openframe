@@ -1,4 +1,3 @@
-local Ped
 do
   local _parent_0 = Element
   local _base_0 = {
@@ -37,6 +36,9 @@ do
         return setPedAnimation(self.element, block, anim, time, loop, update, interruptable, freeze)
       end
       return getPedAnimatino(self.element)
+    end,
+    add_blip = function(self, icon)
+      return Blip(self, icon)
     end
   }
   _base_0.__index = _base_0

@@ -1,0 +1,13 @@
+outputDebugString("Hello element")
+testElement = function()
+  local superman = Element("superhero", "superman")
+  local id = superman:id()
+  outputDebugString(tostring(id))
+  outputChatBox(tostring(id))
+  outputConsole(tostring(id))
+  return outputConsole("Hello element")
+end
+addCommandHandler("testelem", function()
+  return outputChatBox("Hello world")
+end)
+return addEventHandler("onClientResourceStart", getResourceRootElement(getThisResource()), testElement)
