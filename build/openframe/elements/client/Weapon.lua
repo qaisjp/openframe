@@ -1,4 +1,3 @@
-local Weapon
 do
   local _parent_0 = Element
   local _base_0 = {

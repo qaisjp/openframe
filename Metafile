@@ -6,7 +6,7 @@ meta:
     type: script
     
 source: source
-destination: build
+destination: ../openframe_build
 default_flag: dev
 
 flags:
@@ -15,9 +15,15 @@ flags:
         - compile
     
 scripts:
+    - path: openframe/*/shared/*.moon
+      type: shared
+      moonscript: true
     - path: openframe/*/client/*.moon
       type: client
       moonscript: true
     - path: openframe/*/server/*.moon
       type: server
+      moonscript: true
+    - path: openframe/Objects.moon
+      type: shared
       moonscript: true
