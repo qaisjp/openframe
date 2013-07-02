@@ -1,5 +1,7 @@
 <meta>
   <info author="Piotr &quot;Orange&quot; Zduniak" version="3.0" type="script" description="Introduces OOP into LUA using Moonscript" name="openFrame"/>
+  <script src="openframe/elements/shared/BaseElement.lua" type="client"/>
+  <script src="openframe/elements/shared/BaseElement.lua" type="server"/>
   <script src="openframe/elements/client/Blip.lua" type="client"/>
   <script src="openframe/elements/client/Colshape.lua" type="client"/>
   <script src="openframe/elements/client/Element.lua" type="client"/>
@@ -9,10 +11,8 @@
   <script src="openframe/elements/client/Sound.lua" type="client"/>
   <script src="openframe/elements/client/Water.lua" type="client"/>
   <script src="openframe/elements/client/Weapon.lua" type="client"/>
+  <script src="openframe/test/client/element.lua" type="client"/>
+  <script src="openframe/libs/server/Curl.lua" type="server"/>
   <script src="openframe/Objects.lua" type="client"/>
   <script src="openframe/Objects.lua" type="server"/>
-  <export function="initiate_object" type="client"/>
-  <export function="initiate_object" type="server"/>
-  <export function="call_object_function" type="client"/>
-  <export function="call_object_function" type="server"/>
 </meta>
