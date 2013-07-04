@@ -12,6 +12,7 @@ default_flag: dev
 flags:
     dev:
     prod:
+        - merge
         - compile
     
 scripts:
